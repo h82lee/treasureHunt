@@ -8,8 +8,6 @@ import Popup from "./Popup.jsx"
 function App(){
 
 const [timedPopup, setTimedPopup]= useState(false)
-
-
  useEffect ( ()=> {
     setTimeout( ()=>{
         setTimedPopup (true);
@@ -17,10 +15,17 @@ const [timedPopup, setTimedPopup]= useState(false)
 }, []);
    
 
+
+function updateScroll(){  
+    return window.scrollTo(0,document.body.scrollHeight)
+}
+
+
 const [onStart, setOnStart]=useState(false)
 
 function showFirstHint(event){
     setOnStart(true)
+    setTimeout(updateScroll,100)
     event.preventDefault()
 }
 
@@ -29,6 +34,7 @@ const [goClicked1, setGoClicked1]=useState(false)
 function showNextHint(writtenPassword){
    if (writtenPassword===hints[0].password){
     setGoClicked1(true) 
+    setTimeout(updateScroll,100)
    }else {
        alert("Wrong password, try again")
    }
@@ -39,12 +45,11 @@ const [goClicked2, setGoClicked2]=useState(false)
 function showNextHint1(writtenPassword){
     if (writtenPassword===hints[1].password){
      setGoClicked2(true) 
+     setTimeout(updateScroll,100)
     }else {
         alert("Wrong password, try again")
     }
  }
-
-
 
 return (<div>
 <Popup trigger={timedPopup} setTrigger={setTimedPopup}>
