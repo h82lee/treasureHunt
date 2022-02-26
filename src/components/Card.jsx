@@ -20,7 +20,7 @@ function Card(props) {
       value={writtenPassword}
       onChange={handleChange}
       /> 
-      <button className="goButton" 
+     <button className="goButton" 
       onClick={(e)=>{
         e.preventDefault();
         props.handleGoClick(writtenPassword)

@@ -1,6 +1,6 @@
 const hints =[
     {id:1,
-    description: "Curabitur a ligula orci. Donec interdum diam leo, at vulputate nisi vehicula in. Pellentesque ante ex, aliquam dictum porttitor et, egestas id tortor.",
+    description: "the more I dry, the wetter I become. What am I?",
     password:"123456"
     },
     {id:2,

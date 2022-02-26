@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
 import Header from "./Header.jsx"
 import Card from "./Card.jsx"
 import Introduction from "./Introduction.jsx"
@@ -51,7 +52,8 @@ function showNextHint1(writtenPassword){
     }
  }
 
-return (<div>
+return (<>
+<CssBaseline />
 <Popup trigger={timedPopup} setTrigger={setTimedPopup}>
 <h3>Let the game begin 🤡</h3>
 <img src = "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/04/saw-10.png" alt = "saw-img" width="500" height="250"/>
@@ -75,7 +77,7 @@ return (<div>
  
 />:null}
 
-</div>
+</>
 )
 }
 
