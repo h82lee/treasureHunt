@@ -22,35 +22,32 @@ function updateScroll(){
 }
 
 
-const [onStart, setOnStart]=useState(false)
+// const [onStart, setOnStart]=useState(false)
+const [hintsArray,setHintsArray]=useState([])
+const [num, setNum]=useState("")
 
 function showFirstHint(event){
-    setOnStart(true)
+    setNum(0)
+    setHintsArray(()=>{
+        return [hints[num]]
+    })
     setTimeout(updateScroll,100)
     event.preventDefault()
 }
 
-const [goClicked1, setGoClicked1]=useState(false)
 
 function showNextHint(writtenPassword){
-   if (writtenPassword===hints[0].password){
-    setGoClicked1(true) 
+   if (writtenPassword===hints[num].password){
+    setNum(num+1)
+    setHintsArray((prevHints)=>{
+        return [...prevHints, hints[num]]
+    })
+    console.log(num)
     setTimeout(updateScroll,100)
    }else {
        alert("Wrong password, try again")
    }
 }
-
-const [goClicked2, setGoClicked2]=useState(false)
-
-function showNextHint1(writtenPassword){
-    if (writtenPassword===hints[1].password){
-     setGoClicked2(true) 
-     setTimeout(updateScroll,100)
-    }else {
-        alert("Wrong password, try again")
-    }
- }
 
 return (<>
 <CssBaseline />
@@ -60,22 +57,15 @@ return (<>
 </Popup>
 <Header/>
 <Introduction handleStartClick={showFirstHint}/>
-{onStart && <Card 
-    hintNumber={hints[0].id}
-    hintDescription={hints[0].description}
-    handleGoClick = {showNextHint}
-/>}
-{goClicked1? <Card 
-    hintNumber={hints[1].id}
-    hintDescription={hints[1].description}
-    handleGoClick = {showNextHint1}
-/>:null}
 
-{goClicked2? <Card 
-    hintNumber={hints[2].id}
-    hintDescription={hints[2].description}
- 
-/>:null}
+{hintsArray.map(()=>{
+    return <Card 
+    key={hints[num].id}
+    hintNumber={hints[num].id}
+    hintDescription={hints[num].description}
+    handleGoClick = {showNextHint} 
+    />
+})}
 
 </>
 )
