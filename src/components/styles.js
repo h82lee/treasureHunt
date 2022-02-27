@@ -17,8 +17,21 @@ const useStyles = makeStyles(()=>({
         flexGrow:1,
         textAlign:"center"
     },
-    appBar:{
-        left:"0"
+    introduction:{
+        margin: "120px auto 30px",
+        display:"flex",
+        backgroundColor:"secondary",
+    },
+    button:{
+        position:"relative",
+        right:0,
+
+    },
+    textbox:{
+        margin: "30px"
+    },
+    grid:{
+    background:"#E3E8E9"
     }
 }))
 

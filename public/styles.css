@@ -4,68 +4,24 @@
     box-sizing: border-box;
   }
 
+ html{
+    background-color: #E3E8E9 ;
+    height:100%;
+  }
+
 body{
-    background: #83BDC0;
-    padding: 0 16px;
-  }
-
-h1{
-color: white;
-font-family: 'Bangers', cursive;
+  padding: 0 16px;
 }
 
-h3{
-  text-align: center;
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #E3E8E9 ;
+    height: 30px;
 }
-
-form {
-    position: relative;
-    width: 480px;
-    margin: 30px auto 20px auto;
-    background: #F0E1DE;
-    padding: 15px;
-    border-radius: 7px;
-    box-shadow: 0 1px 5px rgb(138, 137, 137);
-  }
-
-  .cardInput{
-      padding-top: 50px;
-      margin:0px auto;
-      width:50%;
-  }
-  form input{
-    width: 73%;
-    border: none;
-    padding: 4px;
-    margin-right: 10px;
-    outline: none;
-    font-size: 1.2em;
-    resize: none;
-    background-color: #F0E1DE;
-  }
-  form button {
-    right: 18px;
-    background: #F7C9B6;
-    color: white;
-    border: none;
-    width: 36px;
-    height: 36px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    outline: none;
-  }
-
-  p {
-    font-family: 'Architects Daughter', cursive;
-  }
-
-  .startButton {
-      width:100%
-  }
-  .goButton{
-      border-radius: 50%;
-  }
-
 
   .popup {
     position:fixed;

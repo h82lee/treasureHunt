@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from "./Header.jsx"
-import Card from "./Card.jsx"
+import Textbox from "./Card.jsx"
 import Introduction from "./Introduction.jsx"
 import hints from "../hints"
 import Popup from "./Popup.jsx"
@@ -52,31 +52,66 @@ function showNextHint1(writtenPassword){
     }
  }
 
+ const [goClicked3, setGoClicked3]=useState(false)
+
+function showNextHint2(writtenPassword){
+    if (writtenPassword===hints[2].password){
+     setGoClicked3(true) 
+     setTimeout(updateScroll,100)
+    }else {
+        alert("Wrong password, try again")
+    }
+}
+
+const [goClicked4, setGoClicked4]=useState(false)
+
+function showNextHint3(writtenPassword){
+    if (writtenPassword===hints[3].password){
+     setGoClicked4(true) 
+     setTimeout(updateScroll,100)
+    }else {
+        alert("Wrong password, try again")
+    }
+}
+
 return (<>
-<CssBaseline />
+<CssBaseline enableColorScheme />
 <Popup trigger={timedPopup} setTrigger={setTimedPopup}>
 <h3>Let the game begin 🤡</h3>
 <img src = "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/04/saw-10.png" alt = "saw-img" width="500" height="250"/>
 </Popup>
 <Header/>
+<main>
 <Introduction handleStartClick={showFirstHint}/>
-{onStart && <Card 
+{onStart && <Textbox
     hintNumber={hints[0].id}
     hintDescription={hints[0].description}
     handleGoClick = {showNextHint}
 />}
-{goClicked1? <Card 
+{goClicked1? <Textbox
     hintNumber={hints[1].id}
     hintDescription={hints[1].description}
     handleGoClick = {showNextHint1}
 />:null}
 
-{goClicked2? <Card 
+{goClicked2? <Textbox
     hintNumber={hints[2].id}
     hintDescription={hints[2].description}
- 
+    handleGoClick ={showNextHint2}
 />:null}
 
+{goClicked3? <Textbox
+    hintNumber={hints[3].id}
+    hintDescription={hints[3].description}
+    handleGoClick ={showNextHint3}
+/>:null}
+
+{goClicked4? <Textbox
+    hintNumber={hints[4].id}
+    hintDescription={hints[4].description}
+/>:null}
+
+</main>
 </>
 )
 }
