@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, CardContent, CardActions, Box, Card, Input, Grid, Fab } from '@mui/material';
-import useStyles from "./styles";
+import {useStyles} from "./styles";
 
 function Textbox(props) { 
 
@@ -34,15 +34,17 @@ function Textbox(props) {
       <Input name="password"
         placeholder='password?'
         value={writtenPassword}
-        onChange={handleChange}>
+        onChange={handleChange}
+        >
         </Input>
       </Grid>
       <Grid item>
-      <Fab className="goButton" 
+      <Fab 
         onClick={(e)=>{
         e.preventDefault();
         props.handleGoClick(writtenPassword)
-        }} size="small">
+        }} size="small"
+        color="primary">
         Go
         </Fab>
       </Grid>

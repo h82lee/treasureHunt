@@ -1,31 +1,38 @@
 import { makeStyles } from '@mui/styles';
 import { createTheme } from '@mui/material/styles'
 
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//         main:"#BBD5D2"
-//     },
-//     secondary:{
-//         main:"#FBDFA0"
-//     }
-//   }
-// });
+const theme = createTheme({
+  palette: {
+    primary: {
+        main:"#94B49F",
+        contrastText: "#fff" 
+    },
+    secondary:{
+        main:"#789395"
+    }
+  }, 
+  typography:{
+      fontFamily:"Quicksand",
+      fontWeightLight:400,
+      fontWeightRegular:500,
+      fontWeightMedium:600,
+      fontWeightBold:700
+  }
+});
 
 const useStyles = makeStyles(()=>({
     headerTitle:{
         flexGrow:1,
-        textAlign:"center"
+        textAlign:"center",
+        color:"white"
     },
     introduction:{
         margin: "120px auto 30px",
-        display:"flex",
-        backgroundColor:"secondary",
+        display:"flex"
     },
     button:{
         position:"relative",
         right:0,
-
     },
     textbox:{
         margin: "30px"
@@ -35,4 +42,4 @@ const useStyles = makeStyles(()=>({
     }
 }))
 
-export default useStyles;
+export {useStyles,theme};

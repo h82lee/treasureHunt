@@ -1,6 +1,6 @@
 import React from 'react';
 import {Typography, Button, CardContent, CardActions, Box, Card, Grid, Container} from "@mui/material"
-import useStyles from "./styles";
+import {useStyles} from "./styles";
 
 
 
@@ -9,6 +9,7 @@ function Introduction(props) {
   const classes = useStyles();
 
   return (
+   
   <div>
    <Grid container justifyContent="center" className={classes.grid}>
  <Box component ="form" className={classes.introduction}>
@@ -28,7 +29,8 @@ function Introduction(props) {
       <Button className = {classes.button}
       onClick={props.handleStartClick}
       fullWidth
-      variant="contained">
+      variant="contained"
+      color="primary">
       Start
       </Button>
       </CardActions>

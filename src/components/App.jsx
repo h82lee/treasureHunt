@@ -5,6 +5,9 @@ import Textbox from "./Card.jsx"
 import Introduction from "./Introduction.jsx"
 import hints from "../hints"
 import Popup from "./Popup.jsx"
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './styles.js';
+
 
 function App(){
 
@@ -75,7 +78,8 @@ function showNextHint3(writtenPassword){
 }
 
 return (<>
-<CssBaseline enableColorScheme />
+ <ThemeProvider theme={theme}>
+<CssBaseline />
 <Popup trigger={timedPopup} setTrigger={setTimedPopup}>
 <h3>Let the game begin 🤡</h3>
 <img src = "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/04/saw-10.png" alt = "saw-img" width="500" height="250"/>
@@ -112,6 +116,7 @@ return (<>
 />:null}
 
 </main>
+</ThemeProvider>
 </>
 )
 }
