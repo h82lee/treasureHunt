@@ -7,6 +7,10 @@ import hints from "../hints"
 import Popup from "./Popup.jsx"
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from './styles.js';
+import Ending from './Ending.jsx';
+import Confetti from './Confetti.jsx';
+
+
 
 
 function App(){
@@ -77,6 +81,16 @@ function showNextHint3(writtenPassword){
     }
 }
 
+
+
+
+const [open, setOpen] = useState(false);
+const handleOpen = () => {
+    setOpen(true)
+};
+const closeFinalPopup = () => setOpen(false);
+
+
 return (<>
  <ThemeProvider theme={theme}>
 <CssBaseline />
@@ -113,9 +127,12 @@ return (<>
 {goClicked4? <Textbox
     hintNumber={hints[4].id}
     hintDescription={hints[4].description}
+    handleGoClick={handleOpen}
 />:null}
-
 </main>
+<Ending trigger={open} close={closeFinalPopup} />
+{open?<Confetti />:""}
+
 </ThemeProvider>
 </>
 )
