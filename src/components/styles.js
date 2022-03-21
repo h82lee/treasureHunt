@@ -1,6 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import { createTheme } from '@mui/material/styles'
 
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -12,11 +13,10 @@ const theme = createTheme({
     }
   }, 
   typography:{
-      fontFamily:"Quicksand",
-      fontWeightLight:400,
-      fontWeightRegular:500,
-      fontWeightMedium:600,
-      fontWeightBold:700
+      fontFamily: "Quicksand",
+      h3:{
+          fontFamily:"Creepster"
+      }
   }
 });
 
@@ -37,20 +37,49 @@ const useStyles = makeStyles(()=>({
     textbox:{
         margin: "30px"
     },
+    text:{
+        width:"400px",
+        margin:"auto"
+    },
     grid:{
-    background:"#E3E8E9"
+         background:"#E3E8E9"
+    },   
+    card:{
+        marginBottom:"10px"
     },
     ending:{
         position: 'absolute',
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 400,
+        width: "50%",
         backgroundColor: 'white',
+        boxShadow: 24,
+        p: 6,
+        padding:"20px",
+        textAlign:"center"
+    },
+    popupModal:{
+        border:0
+    },
+    popupBox:{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: "640px",
+        backgroundColor: 'black',
         border: '2px solid #000',
         boxShadow: 24,
-        p: 4,
-        padding:"20px"
+        padding:"50px",
+        textAlign: "center",
+        color:"white",
+        outline:0
+    },
+    closeBtn:{
+        position: "absolute",
+        top: "16px",
+        right: "16px"
     }
 }))
 

@@ -16,11 +16,12 @@ function Ending(props) {
         onClose={props.close}
       >
         <Box className={classes.ending}>
-          <Typography  variant="h6">
+          <Typography  variant="h2" gutterBottom>
             Congratulations! 
           </Typography>
-          <Typography  sx={{ mt: 2 }}>
-            You've finished your own scavenger hunt Huntingdale addition! Please pack pair of clean underwear and your swimsuit for our relaxing getaway on March 27th!
+          <img src="https://media.istockphoto.com/photos/birthday-cake-decorated-with-colorful-sprinkles-and-ten-candles-picture-id1136810581?k=20&m=1136810581&s=612x612&w=0&h=Jj80oUK2CtY9nwYYRfJXB31ydjhOo5igRolQn-lV8M0=" alt="bday-img" heigh="50%" width="50%"/>
+          <Typography  sx={{ mt: 2 }} variant="h6">
+            Congratulations! You've completed the scavenger hunt Huntingdale edition! Please pack a pair of clean underwear and your swimsuit for our relaxing getaway on March 27th!
           </Typography>
         </Box>
       </Modal>

@@ -10,7 +10,7 @@ import { theme } from './styles.js';
 import Ending from './Ending.jsx';
 import Confetti from './Confetti.jsx';
 
-
+ 
 
 
 function App(){
@@ -82,8 +82,6 @@ function showNextHint3(writtenPassword){
 }
 
 
-
-
 const [open, setOpen] = useState(false);
 const handleOpen = () => {
     setOpen(true)
@@ -94,10 +92,7 @@ const closeFinalPopup = () => setOpen(false);
 return (<>
  <ThemeProvider theme={theme}>
 <CssBaseline />
-<Popup trigger={timedPopup} setTrigger={setTimedPopup}>
-<h3>Let the game begin 🤡</h3>
-<img src = "https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/04/saw-10.png" alt = "saw-img" width="500" height="250"/>
-</Popup>
+<Popup trigger={timedPopup} setTrigger={setTimedPopup}/>
 <Header/>
 <main>
 <Introduction handleStartClick={showFirstHint}/>
@@ -129,6 +124,7 @@ return (<>
     hintDescription={hints[4].description}
     handleGoClick={handleOpen}
 />:null}
+
 </main>
 <Ending trigger={open} close={closeFinalPopup} />
 {open?<Confetti />:""}
