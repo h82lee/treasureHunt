@@ -19,9 +19,9 @@ function Ending(props) {
             width="50%"
           />
           <Typography sx={{ mt: 2 }} variant="h6">
-            Congratulations! You've completed your scavenger! Please pack a pair
-            of clean underwear and your swimsuit for our relaxing getaway on
-            March 27th!
+            Congratulations! You've completed your treasure hunt! Please pack a
+            pair of clean underwear and your swimsuit for our relaxing getaway
+            on March 27th!
           </Typography>
         </Box>
       </Modal>
