@@ -8,7 +8,7 @@ function Ending(props) {
   return (
     <div>
       <Modal open={props.trigger} onClose={props.close}>
-        <Box className={classes.ending}>
+        <Box className={classes.ending} component="form">
           <Typography variant="h2" gutterBottom>
             Congratulations!
           </Typography>

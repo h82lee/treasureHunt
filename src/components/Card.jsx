@@ -50,6 +50,7 @@ function Textbox(props) {
                 </Grid>
                 <Grid item>
                   <Fab
+                    type="submit"
                     onClick={(e) => {
                       e.preventDefault();
                       props.handleGoClick(writtenPassword);
