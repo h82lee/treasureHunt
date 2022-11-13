@@ -1,0 +1,3 @@
+[submodule "treasureHunt"] 
+  path = treasureHunt
+  url = https://github.com/h82lee/treasurehunt.git
