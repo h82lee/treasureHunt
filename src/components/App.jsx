@@ -78,8 +78,9 @@ function App() {
   }
 
   const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen(true);
+  const handleOpen = (writtenPassword) => {
+    if (writtenPassword === hints[4].password) setOpen(true);
+    else alert("Wrong password, try again");
   };
   const closeFinalPopup = () => setOpen(false);
 

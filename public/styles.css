@@ -1,25 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
- html{
-    background-color: #E3E8E9 ;
-    height:100%;
-  }
+html {
+  background-color: #e3e8e9;
+  height: 100%;
+}
 
-
-
-  #my-canvas{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    z-index:10000;
-  }
+#my-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+}
